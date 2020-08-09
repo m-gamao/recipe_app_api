@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       resources :recipes
       resources :categories  #, only: [:index, :create]
       resources :sessions, only: [:create]
-      resources :meal_planners
+      resources :meal_plans
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

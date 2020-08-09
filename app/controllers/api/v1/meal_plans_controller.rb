@@ -34,7 +34,7 @@ class Api::V1::MealPlansController < ApplicationController
     private
             
     def meal_plan_params
-      params.require(meal_plan).permit(:day, :recipe_name, :recipe_ids)
+      params.require(meal_plan).permit(:day, :recipe, :recipe_ids)
     end
   
   end
