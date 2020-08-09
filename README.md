@@ -26,13 +26,13 @@ Things you may want to cover:
 
 Part 1: (Rails backend) 3 days
 1. Create backend API
-2. Set up models: recipe, category, meal planner
+2. Set up models: recipe, category, meal plan
 3. Set up controllers, routes, db files, faker seed file.
 
 Part 2: (React frontend) 4 days
 1. Create Front end
 2. Create components for search and display recipes.
-3. Create components for meal planner.
+3. Create components for meal plan.
 4. Create events
 
 Part 3: (HTML/UX polish) 3 days
