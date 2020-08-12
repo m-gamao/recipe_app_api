@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+recipe = Recipe.create(title: 'Caesar Salad', description: 'chopped romaine lettuce, with grilled chicken, croutons, and blue cheese dressing')
+
+category = Category.create(name: 'Salad')
+
+meal_plan = Meal_plan.create(day: 'Monday', recipe_id: 1)
