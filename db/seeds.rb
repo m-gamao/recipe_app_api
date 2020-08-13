@@ -11,4 +11,4 @@ recipe = Recipe.create(title: 'Caesar Salad', description: 'chopped romaine lett
 
 category = Category.create(name: 'Salad')
 
-meal_plan = Meal_plan.create(day: 'Monday', recipe_id: 1)
+ 
