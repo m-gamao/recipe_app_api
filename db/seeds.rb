@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-recipe = Recipe.create(title: 'Caesar Salad', description: 'chopped romaine lettuce, with grilled chicken, croutons, and blue cheese dressing')
+favorite = Favorite.create(title: 'Caesar Salad', description: 'chopped romaine lettuce, with grilled chicken, croutons, and blue cheese dressing')
 
 category = Category.create(name: 'Salad')
 
