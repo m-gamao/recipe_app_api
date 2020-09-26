@@ -1,11 +1,11 @@
 class ServingsController < ApplicationController
       def index
-        servings = Servings.all
+        servings = Serving.all
         render json: servings
       end
         
       def show
-        servings = Servings.find(params[:id])
+        servings = Serving.find(params[:id])
         render json: servings  
       end
              
@@ -34,9 +34,9 @@ class ServingsController < ApplicationController
       private
               
       def servings_params
-        params.require(:servings).permit(:name, :recipe_id)
+        params.require(:servings).permit(:serving_size, :favorite_id)
       end
     
     end
       
-end
+

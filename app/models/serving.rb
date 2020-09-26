@@ -1,4 +1,4 @@
-class Category < ApplicationRecord
+class Serving < ApplicationRecord
   has_many :favorites
 end
 
