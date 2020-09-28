@@ -1,4 +1,4 @@
-class ServingsController < ApplicationController
+class Api::V1::ServingsController < ApplicationController
       def index
         servings = Serving.all
         render json: servings
@@ -34,7 +34,7 @@ class ServingsController < ApplicationController
       private
               
       def servings_params
-        params.require(:servings).permit(:serving_size, :favorite_id)
+        params.permit(:serving_size, :favorite_id)
       end
     
     end
