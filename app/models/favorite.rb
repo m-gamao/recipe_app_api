@@ -1,5 +1,5 @@
 class Favorite < ApplicationRecord
-  belongs_to :serving
+  #belongs_to :serving
 end
 
 

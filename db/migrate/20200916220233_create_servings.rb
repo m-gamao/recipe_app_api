@@ -9,7 +9,7 @@ class CreateServings < ActiveRecord::Migration[6.0]
 end
 
 # 4 Serving_size DATA STRINGS ON THE TABLE: 
-  # "SM: 1-3 people", 
-  # "MED: 4-6 people", 
-  # "LG: 7-10 people", 
-  # "Party: 11 people+"
+  # "SMALL: 1-3 people", 
+  # "MEDIUM: 4-6 people", 
+  # "LARGE: 7-10 people", 
+  # "PARTY: 11 people+"

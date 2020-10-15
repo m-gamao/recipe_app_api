@@ -3,38 +3,24 @@ class Api::V1::FavoritesController < ApplicationController
     favorites = Favorite.all
     render json: favorites
   end
-    
-  def show
-    favorite = Favorite.find(params[:id])
-    render json:  favorite  
-  end
-         
-  def new
-    favorite = Favorite.new
-  end
         
   def create
-    favorite = Favorite.all(favorite_params)
+    favorite = Favorite.new(favorite_params)
     if  favorite.save
-    render json:  favorite, status: :accepted
+      render json: favorite, status: :accepted
     else
-    render json: {errors:  favorite.errors.full_messages}, status: unprocessible_entity
+      render json: {errors:  favorite.errors.full_messages}
     end
+    
   end 
 
-    
-  def edit
-    favorite = Favorite.find_by(params[:id])
+  def destroy
   end
-    
-  def update
-    favorite = Favorite.find_by(params[:id])
-  end
-    
+   
   private
           
   def favorite_params
-    params.require(:favorite).permit(:recipe_name, :url, :image)
+    params.require(:favorite).permit(:recipe_name, :url, :image, :serving_size)
   end
 
 end
