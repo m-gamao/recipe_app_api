@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_15_022308) do
-
-  create_table "favorites", force: :cascade do |t|
-    t.string "recipe_name"
-    t.string "url"
-    t.string "image"
-    t.string "serving_size"
-  end
+ActiveRecord::Schema.define(version: 2020_12_26_134337) do
 
   create_table "servings", force: :cascade do |t|
     t.string "serving_size"
