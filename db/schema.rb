@@ -12,6 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_12_26_134337) do
 
+  create_table "favorites", force: :cascade do |t|
+    t.string "recipe_name"
+    t.string "url"
+    t.string "image"
+    t.string "serving_size"
+    t.integer "likes"
+  end
+
   create_table "servings", force: :cascade do |t|
     t.string "serving_size"
     t.string "yield"
