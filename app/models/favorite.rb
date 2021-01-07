@@ -1,5 +1,6 @@
 class Favorite < ApplicationRecord
   #belongs_to :serving
+  has_many :likes
 end
 
 

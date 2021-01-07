@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_26_134337) do
+ActiveRecord::Schema.define(version: 2021_01_06_230853) do
 
   create_table "favorites", force: :cascade do |t|
     t.string "recipe_name"
@@ -20,10 +20,18 @@ ActiveRecord::Schema.define(version: 2020_12_26_134337) do
     t.integer "likes"
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.integer "favorite_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["favorite_id"], name: "index_likes_on_favorite_id"
+  end
+
   create_table "servings", force: :cascade do |t|
     t.string "serving_size"
     t.string "yield"
     t.string "favorite_id"
   end
 
+  add_foreign_key "likes", "favorites"
 end
