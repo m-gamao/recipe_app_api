@@ -6,7 +6,7 @@ class Api::V1::FavoritesController < ApplicationController
         
   def create
     favorite = Favorite.new(favorite_params)
-    if  favorite.save
+    if favorite.save
       render json: favorite, status: :accepted
     else
       render json: {errors:  favorite.errors.full_messages}
@@ -15,6 +15,12 @@ class Api::V1::FavoritesController < ApplicationController
   end 
 
   def destroy
+    favorite = Favorite.find(params[:id])
+    if favorite.destroy
+      render json: favorite 
+    else
+      render json: {errors: favorite.errors.full_messages}
+    end
   end
    
   private
